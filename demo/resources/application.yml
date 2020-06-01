@@ -1,0 +1,17 @@
+spring:
+  profiles: dev, default
+  rabbitmq-config:
+    queues:
+      queue-consumer: fila
+  rabbitmq:
+    requested-heartbeat: 30
+    host: host
+    username: user
+    password: senha
+    port: 5672
+    listener:
+      simple:
+        concurrency: 1
+        max-concurrency: 1
+        prefetch: 1
+    addresses:

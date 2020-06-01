@@ -1,0 +1,17 @@
+spring:
+  profiles: dev, default
+  rabbitmq-config:
+    queues:
+      queue-consumer: teste-estagiario
+  rabbitmq:
+    requested-heartbeat: 30
+    host: 172.16.240.59
+    username: automacao
+    password: 4ut0m4t3
+    port: 5672
+    listener:
+      simple:
+        concurrency: 1
+        max-concurrency: 1
+        prefetch: 1
+    addresses:
